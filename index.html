@@ -18,6 +18,9 @@
             <span class="brand-mark">₿</span>
             <span>Voters For Bitcoin</span>
           </a>
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="nav-toggle-icon">☰</span>
+          </button>
           <div class="nav-links">
             <a href="#directory">Senators</a>
             <div class="nav-dropdown">
@@ -163,6 +166,9 @@
             </p>
           </div>
 
+          <button id="filters-toggle" class="filters-toggle button button-secondary" type="button" aria-expanded="false">
+            <span id="filters-toggle-label">Show filters</span>
+          </button>
           <div class="filters" aria-label="Directory filters">
             <label class="filter">
               <span>Search</span>
@@ -306,5 +312,6 @@
 
     <script src="./data/content.js"></script>
     <script src="./app.js"></script>
+    <script src="./nav.js"></script>
   </body>
 </html>

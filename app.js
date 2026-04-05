@@ -238,6 +238,12 @@
         activeSlug = senator.slug;
         renderSenatorList();
         renderDetail();
+        // On mobile the detail panel renders below the card list — scroll to it
+        if (window.innerWidth <= 980) {
+          requestAnimationFrame(() => {
+            senatorDetail.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        }
       });
 
       senatorList.append(card);

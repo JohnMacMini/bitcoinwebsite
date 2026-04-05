@@ -181,6 +181,34 @@ a {
   display: block;
 }
 
+/* ── Mobile navigation toggle (hidden on desktop) ── */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-toggle-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* ── Filter collapse toggle (hidden on desktop) ── */
+.filters-toggle {
+  display: none;
+  width: 100%;
+  margin-top: 16px;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
@@ -1041,43 +1069,79 @@ h3 {
   }
 
   .topbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 10px;
-    padding-bottom: 14px;
+    padding-bottom: 10px;
     border-bottom: 1px solid rgba(23, 20, 17, 0.08);
   }
 
+  .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  /* Nav collapses under brand+toggle, revealed by hamburger */
   .nav-links {
+    display: none;
+    flex-direction: column;
     width: 100%;
-    gap: 8px 12px;
-    align-items: center;
+    gap: 0;
+    padding-top: 10px;
     font-size: 0.95rem;
     line-height: 1.35;
   }
 
+  .nav-links.is-open {
+    display: flex;
+  }
+
   .nav-links > a,
   .nav-dropdown-trigger {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
-    min-height: 0;
+    width: 100%;
+    padding: 10px 4px;
+    min-height: 44px;
     border-radius: 0;
     background: transparent;
     font-size: 0.95rem;
     color: rgba(23, 20, 17, 0.76);
   }
 
+  /* Dropdowns: static/inline on mobile, toggled by JS class */
   .nav-dropdown {
-    padding-bottom: 14px;
-    margin-bottom: -14px;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   .nav-dropdown-menu {
-    position: absolute;
+    position: static;
+    display: none;
+    min-width: 0;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    padding: 0 0 6px 16px;
     margin-top: 0;
-    width: auto;
-    min-width: 170px;
-    box-shadow: var(--shadow);
+  }
+
+  /* Disable the CSS hover trigger — JS handles it via .is-open */
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu {
+    display: none;
+  }
+
+  .nav-dropdown.is-open > .nav-dropdown-menu {
+    display: block;
+  }
+
+  .nav-dropdown.is-open > .nav-dropdown-trigger::after {
+    transform: rotate(180deg);
   }
 
   .hero-grid,
@@ -1147,6 +1211,37 @@ h3 {
   .snapshot-grid,
   .intro-grid {
     gap: 14px;
+  }
+
+  /* 2×2 snapshot grid looks much better than 4 stacked cards */
+  .snapshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Filters collapse behind a toggle on small screens */
+  .filters-toggle {
+    display: flex;
+  }
+
+  .filters {
+    display: none;
+  }
+
+  .filters.is-open {
+    display: grid;
+    margin-top: 12px;
+  }
+
+  /* Bump tag / confidence touch targets to the 44 px minimum */
+  .tag,
+  .confidence {
+    min-height: 44px;
+    padding: 8px 12px;
+  }
+
+  /* Tighten CTA strip padding */
+  .cta-strip {
+    padding: 18px;
   }
 
   .senator-card-top,
