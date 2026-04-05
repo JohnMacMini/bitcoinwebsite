@@ -1109,6 +1109,8 @@ h3 {
     padding-top: 10px;
     font-size: 0.95rem;
     line-height: 1.35;
+    align-items: center;
+    text-align: center;
   }
 
   .nav-links.is-open {
@@ -1119,7 +1121,7 @@ h3 {
   .nav-dropdown-trigger {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     padding: 10px 4px;
     min-height: 44px;
@@ -1127,12 +1129,18 @@ h3 {
     background: transparent;
     font-size: 0.95rem;
     color: rgba(23, 20, 17, 0.76);
+    text-align: center;
   }
 
   /* Dropdowns: static/inline on mobile, toggled by JS class */
   .nav-dropdown {
+    width: 100%;
     padding-bottom: 0;
     margin-bottom: 0;
+  }
+
+  .nav-dropdown-trigger {
+    gap: 4px;
   }
 
   .nav-dropdown-menu {
@@ -1144,8 +1152,12 @@ h3 {
     border-radius: 0;
     border: none;
     background: transparent;
-    padding: 0 0 6px 16px;
+    padding: 0 0 6px;
     margin-top: 0;
+  }
+
+  .nav-dropdown-menu a {
+    text-align: center;
   }
 
   /* Disable the CSS hover trigger — JS handles it via .is-open */
