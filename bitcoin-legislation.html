@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitcoin Policy Tracker | Voters For Bitcoin</title>
+    <meta
+      name="description"
+      content="Track Bitcoin-specific federal legislation, executive orders, and senator voting records where recorded votes exist."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-scope="bitcoin">
+    <div class="site-shell">
+      <header class="hero" id="top">
+        <nav class="topbar">
+          <a class="brand" href="./index.html">
+            <span class="brand-mark">₿</span>
+            <span>Voters For Bitcoin</span>
+          </a>
+          <div class="nav-links">
+            <a href="./index.html#directory">Senators</a>
+            <div class="nav-dropdown">
+              <a href="./bitcoin-legislation.html" class="nav-dropdown-trigger" aria-haspopup="true">Legislation</a>
+              <div class="nav-dropdown-menu">
+                <a href="./bitcoin-legislation.html">Bitcoin</a>
+                <a href="./crypto-legislation.html">Crypto</a>
+              </div>
+            </div>
+            <div class="nav-dropdown">
+              <a href="./resources/index.html" class="nav-dropdown-trigger" aria-haspopup="true">Resources</a>
+              <div class="nav-dropdown-menu">
+                <a href="./resources/index.html">Resource hub</a>
+                <a href="./resources/bitcoin-basics.html">Bitcoin basics</a>
+                <a href="./resources/self-custody.html">Self-custody</a>
+                <a href="./resources/educators.html">Educators</a>
+              </div>
+            </div>
+            <div class="nav-dropdown">
+              <a href="./for-offices.html" class="nav-dropdown-trigger" aria-haspopup="true">For offices</a>
+              <div class="nav-dropdown-menu">
+                <a href="./for-offices.html">Overview</a>
+                <a href="./survey.html">Bitcoin policy survey</a>
+              </div>
+            </div>
+            <a href="./suggest.html">Suggest info</a>
+            <a href="./index.html#methodology">Methodology</a>
+          </div>
+        </nav>
+
+        <div class="page-hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Federal policy tracker</p>
+            <h1>Bitcoin policy, narrowed to Bitcoin itself.</h1>
+            <p class="hero-text">
+              This page only includes federal measures that directly affect
+              Bitcoin, such as strategic reserve legislation, Bitcoin-specific
+              executive action, or federal handling of bitcoin itself.
+            </p>
+          </div>
+          <aside class="stat-card">
+            <p class="panel-label">Current scope</p>
+            <strong id="bill-count"></strong>
+            <p>
+              federal actions currently tracked in this Bitcoin-specific view.
+            </p>
+            <p class="page-note" id="vote-summary"></p>
+          </aside>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="section-heading section-heading-row">
+            <div>
+              <p class="eyebrow">Status</p>
+              <h2>What is actually moving right now?</h2>
+            </div>
+            <p class="section-support">
+              This page stays intentionally narrow so Bitcoin-specific action is
+              not blurred with broader crypto policy.
+            </p>
+          </div>
+          <div class="legislation-grid">
+            <div id="bill-list" class="bill-grid"></div>
+            <div id="status-list" class="bill-grid"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading section-heading-row">
+            <div>
+              <p class="eyebrow">Executive actions</p>
+              <h2>Bitcoin-specific executive orders</h2>
+            </div>
+            <p class="section-support">
+              Executive orders are included here only when they directly mention
+              Bitcoin or establish Bitcoin-specific federal policy.
+            </p>
+          </div>
+          <div id="executive-order-list" class="bill-grid"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading section-heading-row">
+            <div>
+              <p class="eyebrow">Senate votes</p>
+              <h2>Recorded votes, when they exist</h2>
+            </div>
+            <p class="section-support">
+              If a Bitcoin-specific measure receives a recorded Senate vote, it
+              appears here with senator-by-senator results.
+            </p>
+          </div>
+          <div id="vote-list" class="vote-grid"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <strong>Scope rule</strong>
+          <p>
+            Inclusion requires a direct impact on Bitcoin itself. Broader crypto
+            frameworks, market structure proposals, and stablecoin bills belong
+            on the crypto legislation page.
+          </p>
+        </div>
+        <div>
+          <p class="footer-label">Last verified</p>
+          <p>April 5, 2026</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./data/content.js"></script>
+    <script src="./legislation.js"></script>
+  </body>
+</html>

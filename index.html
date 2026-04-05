@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voters For Bitcoin</title>
+    <meta
+      name="description"
+      content="Track public Bitcoin positions of U.S. senators with sourced summaries, policy signals, and educational resources."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero" id="top">
+        <nav class="topbar">
+          <a class="brand" href="#top">
+            <span class="brand-mark">₿</span>
+            <span>Voters For Bitcoin</span>
+          </a>
+          <div class="nav-links">
+            <a href="#directory">Senators</a>
+            <div class="nav-dropdown">
+              <a href="./bitcoin-legislation.html" class="nav-dropdown-trigger" aria-haspopup="true">Legislation</a>
+              <div class="nav-dropdown-menu">
+                <a href="./bitcoin-legislation.html">Bitcoin</a>
+                <a href="./crypto-legislation.html">Crypto</a>
+              </div>
+            </div>
+            <div class="nav-dropdown">
+              <a href="./resources/index.html" class="nav-dropdown-trigger" aria-haspopup="true">Resources</a>
+              <div class="nav-dropdown-menu">
+                <a href="./resources/index.html">Resource hub</a>
+                <a href="./resources/bitcoin-basics.html">Bitcoin basics</a>
+                <a href="./resources/self-custody.html">Self-custody</a>
+                <a href="./resources/educators.html">Educators</a>
+              </div>
+            </div>
+            <div class="nav-dropdown">
+              <a href="./for-offices.html" class="nav-dropdown-trigger" aria-haspopup="true">For offices</a>
+              <div class="nav-dropdown-menu">
+                <a href="./for-offices.html">Overview</a>
+                <a href="./survey.html">Bitcoin policy survey</a>
+              </div>
+            </div>
+            <a href="./suggest.html">Suggest info</a>
+            <a href="#methodology">Methodology</a>
+          </div>
+        </nav>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Public-source voter research</p>
+            <h1>See where federal lawmakers stand on Bitcoin.</h1>
+            <p class="hero-text">
+              Track public Bitcoin positions from senators and House members,
+              review source-backed policy signals, and explore educational
+              resources for voters who care about digital asset policy.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#directory">Browse senators</a>
+              <a class="button button-secondary" href="./bitcoin-legislation.html">View policy tracker</a>
+            </div>
+          </div>
+
+          <aside class="hero-panel">
+            <p class="panel-label">What this version does</p>
+            <ul class="panel-list">
+              <li>Shows sourced federal lawmaker profiles in one place</li>
+              <li>Covers both Senate and House positions</li>
+              <li>Attaches each profile to public sources</li>
+              <li>Separates stance labels from confidence levels</li>
+              <li>Includes educational Bitcoin resources</li>
+            </ul>
+            <p class="panel-note">
+              Every profile is designed to make the public record easier to scan
+              without hiding uncertainty.
+            </p>
+          </aside>
+        </div>
+      </header>
+
+      <main>
+        <section class="section section-intro">
+          <div class="section-heading">
+            <p class="eyebrow">Why this exists</p>
+            <h2>Bitcoin voters need better source-backed summaries.</h2>
+          </div>
+          <div class="intro-grid">
+            <article>
+              <h3>Track signals, not slogans</h3>
+              <p>
+                Each profile combines direct statements, legislation, and public
+                actions into a plain-language summary.
+              </p>
+            </article>
+            <article>
+              <h3>Separate certainty from opinion</h3>
+              <p>
+                A senator can look favorable to Bitcoin while still having only
+                medium-confidence evidence. Both should be visible.
+              </p>
+            </article>
+            <article>
+              <h3>Help newcomers learn fast</h3>
+              <p>
+                A resource section gives voters context before they try to judge
+                Bitcoin policy on campaign vibes alone.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading section-heading-row">
+            <div>
+              <p class="eyebrow">Legislation tracker</p>
+              <h2>Bitcoin-specific bills and executive actions</h2>
+            </div>
+            <p class="section-support">
+              View federal bills and executive actions that directly affect
+              Bitcoin itself, with status, source links, and senator vote
+              information where a recorded vote exists.
+            </p>
+          </div>
+          <div class="cta-strip">
+            <p>
+              The policy tracker is limited to Bitcoin-specific federal measures
+              so broader crypto and stablecoin actions do not muddy the
+              picture.
+            </p>
+            <a class="button button-primary" href="./bitcoin-legislation.html">Open policy tracker</a>
+          </div>
+          <div class="policy-links">
+            <a class="policy-link-card" href="./bitcoin-legislation.html">
+              <p class="eyebrow">Bitcoin policy</p>
+              <h3>Bitcoin legislation</h3>
+              <p>
+                Open the Bitcoin-only tracker for strategic reserve bills,
+                executive orders, and future Bitcoin-specific Senate votes.
+              </p>
+            </a>
+            <a class="policy-link-card" href="./crypto-legislation.html">
+              <p class="eyebrow">Crypto policy</p>
+              <h3>Crypto legislation</h3>
+              <p>
+                Open the broader digital asset tracker for stablecoins, market
+                structure, DeFi reporting, and wider crypto policy.
+              </p>
+            </a>
+          </div>
+        </section>
+
+        <section class="section" id="directory">
+          <div class="section-heading section-heading-row">
+            <div>
+              <p class="eyebrow">Federal lawmaker directory</p>
+              <h2>Public Bitcoin lawmaker tracker</h2>
+            </div>
+            <p class="section-support">
+              Filter senators and representatives, then open a card to read the
+              summary, confidence level, and cited public sources.
+            </p>
+          </div>
+
+          <div class="filters" aria-label="Directory filters">
+            <label class="filter">
+              <span>Search</span>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Search by senator, state, or party"
+              />
+            </label>
+            <label class="filter">
+              <span>Chamber</span>
+              <select id="chamber-filter">
+                <option value="all">Senate and House</option>
+              </select>
+            </label>
+            <label class="filter">
+              <span>State</span>
+              <select id="state-filter">
+                <option value="all">All states</option>
+              </select>
+            </label>
+            <label class="filter">
+              <span>Stance</span>
+              <select id="stance-filter">
+                <option value="all">All stances</option>
+                <option value="unreviewed">Show unreviewed lawmakers</option>
+              </select>
+            </label>
+            <button id="reset-filters" class="button button-secondary reset-filters" type="button">
+              Reset filters
+            </button>
+          </div>
+          <p id="directory-summary" class="directory-summary"></p>
+
+          <div class="directory-grid">
+            <div id="senator-list" class="senator-list" aria-live="polite"></div>
+            <article id="senator-detail" class="senator-detail"></article>
+          </div>
+        </section>
+
+        <section class="section section-snapshot">
+          <div class="section-heading">
+            <p class="eyebrow">Classification model</p>
+            <h2>Simple labels keep the site understandable.</h2>
+          </div>
+          <div class="snapshot-grid" id="stance-summary"></div>
+        </section>
+
+        <section class="section" id="resources">
+          <div class="section-heading section-heading-row">
+            <div>
+              <p class="eyebrow">Learning links</p>
+              <h2>Bitcoin resources for voters</h2>
+            </div>
+            <p class="section-support">
+              External links here are educational starting points, not
+              endorsements of every opinion on those sites.
+            </p>
+          </div>
+          <div id="resource-list" class="resource-list"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading section-heading-row">
+            <div>
+              <p class="eyebrow">For campaigns and offices</p>
+              <h2>Respond directly to the site’s Bitcoin policy survey.</h2>
+            </div>
+            <p class="section-support">
+              Offices and campaigns can submit an official position so voters can
+              compare public records with direct responses.
+            </p>
+          </div>
+          <div class="policy-links">
+            <a class="policy-link-card" href="./for-offices.html">
+              <p class="eyebrow">Overview</p>
+              <h3>For offices</h3>
+              <p>
+                See how official responses are verified, displayed, and kept
+                separate from the public-record summary.
+              </p>
+            </a>
+            <a class="policy-link-card" href="./survey.html">
+              <p class="eyebrow">Survey</p>
+              <h3>Bitcoin policy survey</h3>
+              <p>
+                Open the standardized questionnaire for offices and campaigns to
+                submit or clarify their current position.
+              </p>
+            </a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading section-heading-row">
+            <div>
+              <p class="eyebrow">Help improve the record</p>
+              <h2>Missing a lawmaker, quote, vote, or source?</h2>
+            </div>
+            <p class="section-support">
+              Visitors can submit proposed additions or corrections through a
+              structured suggestion form.
+            </p>
+          </div>
+          <div class="cta-strip">
+            <p>
+              Use the suggestion page to flag missing lawmakers, public
+              statements, broken links, outdated vote status, or any source that
+              should be reviewed.
+            </p>
+            <a class="button button-primary" href="./suggest.html">Open suggestion form</a>
+          </div>
+        </section>
+
+        <section class="section methodology" id="methodology">
+          <div class="section-heading">
+            <p class="eyebrow">Methodology</p>
+            <h2>How senator positions are classified</h2>
+          </div>
+          <div id="methodology-list" class="methodology-list"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <strong>Voters For Bitcoin</strong>
+          <p>
+            A civic research resource focused on public federal lawmaker
+            positions related to Bitcoin and digital asset policy.
+          </p>
+        </div>
+        <div>
+          <p class="footer-label">Source standard</p>
+          <p>
+            Each stance is paired with linked public evidence and a visible
+            review date.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./data/content.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

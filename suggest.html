@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suggest an Update | Voters For Bitcoin</title>
+    <meta
+      name="description"
+      content="Suggest a missing lawmaker, source, quote, bill, vote, or correction for Voters For Bitcoin."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <a class="brand" href="./index.html">
+            <span class="brand-mark">₿</span>
+            <span>Voters For Bitcoin</span>
+          </a>
+          <div class="nav-links">
+            <a href="./index.html#directory">Senators</a>
+            <div class="nav-dropdown">
+              <a href="./bitcoin-legislation.html" class="nav-dropdown-trigger" aria-haspopup="true">Legislation</a>
+              <div class="nav-dropdown-menu">
+                <a href="./bitcoin-legislation.html">Bitcoin</a>
+                <a href="./crypto-legislation.html">Crypto</a>
+              </div>
+            </div>
+            <div class="nav-dropdown">
+              <a href="./resources/index.html" class="nav-dropdown-trigger" aria-haspopup="true">Resources</a>
+              <div class="nav-dropdown-menu">
+                <a href="./resources/index.html">Resource hub</a>
+                <a href="./resources/bitcoin-basics.html">Bitcoin basics</a>
+                <a href="./resources/self-custody.html">Self-custody</a>
+                <a href="./resources/educators.html">Educators</a>
+              </div>
+            </div>
+            <div class="nav-dropdown">
+              <a href="./for-offices.html" class="nav-dropdown-trigger" aria-haspopup="true">For offices</a>
+              <div class="nav-dropdown-menu">
+                <a href="./for-offices.html">Overview</a>
+                <a href="./survey.html">Bitcoin policy survey</a>
+              </div>
+            </div>
+            <a href="./suggest.html">Suggest info</a>
+            <a href="./index.html#methodology">Methodology</a>
+          </div>
+        </nav>
+
+        <div class="page-hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Suggestions</p>
+            <h1>Suggest missing information, corrections, or new public sources.</h1>
+            <p class="hero-text">
+              Use this page to flag missing lawmakers, public statements, bills,
+              votes, broken links, or outdated summaries. Submissions open a
+              prefilled GitHub issue so the record can be reviewed and updated.
+            </p>
+          </div>
+          <aside class="resource-note">
+            <p class="panel-label">What helps most</p>
+            <ul>
+              <li>Name the lawmaker or bill as clearly as possible.</li>
+              <li>Include the direct source URL when you have one.</li>
+              <li>Explain why the current site looks incomplete or wrong.</li>
+            </ul>
+          </aside>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Submit an update</p>
+            <h2>Structured suggestions are easier to review quickly.</h2>
+          </div>
+          <div class="suggest-grid">
+            <article class="suggest-card">
+              <h3>Good submissions include</h3>
+              <ul class="suggest-help">
+                <li>A direct official source whenever possible.</li>
+                <li>Whether the issue is about a senator, representative, bill, vote, or resource link.</li>
+                <li>A short explanation of what should be added or corrected.</li>
+                <li>Why the source is Bitcoin-specific, if that distinction matters.</li>
+              </ul>
+              <p>
+                Clicking submit opens a prefilled GitHub issue in the public
+                project repo. That keeps the correction trail organized without
+                requiring a separate backend form service.
+              </p>
+            </article>
+
+            <article class="suggest-form-card">
+              <h3>Suggestion form</h3>
+              <form id="suggest-form" class="suggest-form">
+                <label>
+                  Type of update
+                  <select id="suggest-type" name="type" required>
+                    <option value="Missing lawmaker">Missing lawmaker</option>
+                    <option value="Correction">Correction</option>
+                    <option value="Missing source">Missing source</option>
+                    <option value="Legislation update">Legislation update</option>
+                    <option value="Feature request">Feature request</option>
+                    <option value="Broken link">Broken link</option>
+                    <option value="Resource suggestion">Resource suggestion</option>
+                  </select>
+                </label>
+                <label>
+                  Name or subject
+                  <input id="suggest-subject" name="subject" type="text" placeholder="Example: Tom Emmer or BITCOIN Act of 2025" required />
+                </label>
+                <label>
+                  Source URL
+                  <input id="suggest-url" name="url" type="url" placeholder="https://..." />
+                </label>
+                <label>
+                  Details
+                  <textarea id="suggest-details" name="details" placeholder="What is missing or incorrect, and what should be updated?" required></textarea>
+                </label>
+                <label>
+                  Your name or handle
+                  <input id="suggest-name" name="name" type="text" placeholder="Optional" />
+                </label>
+                <div class="suggest-actions">
+                  <button class="button button-primary" type="submit">Open GitHub issue</button>
+                  <button id="copy-suggestion" class="button button-secondary" type="button">Copy summary</button>
+                </div>
+              </form>
+              <pre id="suggest-output" class="suggest-output is-hidden"></pre>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <strong>Review standard</strong>
+          <p>
+            Suggestions should still be checked against direct public sources
+            before the public site changes.
+          </p>
+        </div>
+        <div>
+          <p class="footer-label">Project repo</p>
+          <p><a href="https://github.com/JohnMacMini/VotersForBitcoin/issues/new" target="_blank" rel="noreferrer">Open issues page</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./suggest.js"></script>
+  </body>
+</html>
