@@ -168,6 +168,8 @@ a {
   display: block;
   padding: 10px 12px;
   border-radius: 10px;
+  color: var(--muted);
+  text-decoration: none;
 }
 
 .nav-dropdown-menu a:hover,
