@@ -35,10 +35,16 @@ body {
     linear-gradient(180deg, #f5f0e4 0%, #f2ede2 42%, #ede7da 100%);
   font-family: var(--sans);
   overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(139, 77, 13, 0.12);
 }
 
 a {
   color: inherit;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: rgba(139, 77, 13, 0.12);
 }
 
 .site-shell {
@@ -194,6 +200,7 @@ a {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.55);
+  color: var(--accent-deep);
   cursor: pointer;
   flex-shrink: 0;
 }
@@ -201,6 +208,7 @@ a {
 .nav-toggle-icon {
   font-size: 1.15rem;
   line-height: 1;
+  color: var(--accent-deep);
   pointer-events: none;
 }
 
@@ -452,6 +460,7 @@ h3 {
 }
 
 .senator-card h3 {
+  color: var(--text);
   margin-bottom: 8px;
 }
 
@@ -586,9 +595,14 @@ h3 {
 }
 
 .evidence-card a,
-.resource-card a {
+.resource-card a,
+.guide-card a,
+.educator-card a,
+.contact-card a,
+.footer a {
   color: var(--accent-deep);
   font-weight: 700;
+  text-decoration: none;
 }
 
 .snapshot-grid {
@@ -684,6 +698,7 @@ h3 {
 .resource-note a {
   color: var(--accent-deep);
   font-weight: 700;
+  text-decoration: none;
 }
 
 .suggest-grid {
@@ -971,6 +986,7 @@ h3 {
 .source-link {
   color: var(--accent-deep);
   font-weight: 700;
+  text-decoration: none;
 }
 
 .vote-grid {
