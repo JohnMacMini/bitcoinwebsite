@@ -93,6 +93,28 @@
     return `<span class="response-status">${status}</span>`;
   }
 
+  function getInitials(name) {
+    return name
+      .split(" ")
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((part) => part[0])
+      .join("")
+      .toUpperCase();
+  }
+
+  function getPhotoMarkup(lawmaker, variant = "card") {
+    const initials = getInitials(lawmaker.name);
+    const className =
+      variant === "detail" ? "lawmaker-photo lawmaker-photo-detail" : "lawmaker-photo";
+
+    if (lawmaker.photoUrl) {
+      return `<img class="${className}" src="${lawmaker.photoUrl}" alt="Official portrait of ${lawmaker.name}" loading="lazy" />`;
+    }
+
+    return `<span class="${className} lawmaker-photo-placeholder" aria-hidden="true">${initials}</span>`;
+  }
+
   function applyStanceFromLocation() {
     const params = new URLSearchParams(window.location.search);
     const chamber = params.get("chamber");
@@ -225,9 +247,12 @@
 
       card.innerHTML = `
         <div class="senator-card-top">
-          <div>
-            <h3>${senator.name}</h3>
-            <div class="senator-meta">${senator.chamber} · ${senator.party} · ${createStateLink(senator.state)}</div>
+          <div class="senator-card-identity">
+            ${getPhotoMarkup(senator)}
+            <div>
+              <h3>${senator.name}</h3>
+              <div class="senator-meta">${senator.chamber} · ${senator.party} · ${createStateLink(senator.state)}</div>
+            </div>
           </div>
           ${createStanceLink(senator.stance, senator.tone)}
         </div>
@@ -261,9 +286,12 @@
         <div>
           <p class="eyebrow">Selected profile</p>
           <div class="detail-top">
-            <div>
-              <h2>${senator.name}</h2>
-              <p class="detail-kicker">${senator.chamber} · ${senator.party} · ${createStateLink(senator.state)}</p>
+            <div class="detail-header">
+              ${getPhotoMarkup(senator, "detail")}
+              <div>
+                <h2>${senator.name}</h2>
+                <p class="detail-kicker">${senator.chamber} · ${senator.party} · ${createStateLink(senator.state)}</p>
+              </div>
             </div>
             <div>
               ${createStanceLink(senator.stance, senator.tone)}
