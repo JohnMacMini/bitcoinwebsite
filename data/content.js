@@ -540,6 +540,38 @@ window.VFB_CONTENT = {
         bills: [
           {
             chamber: "Senate bill",
+            billNumber: "S.1124",
+            title: "Anti-CBDC Surveillance State Act",
+            introducedDate: "March 25, 2025",
+            latestActionDate: "March 25, 2025",
+            status: "Introduced and referred to committee",
+            summary:
+              "Would prohibit the Federal Reserve from issuing a central bank digital currency directly or indirectly to individuals and restrict CBDC use for monetary policy.",
+            billUrl: "https://www.congress.gov/bill/119th-congress/senate-bill/1124",
+            textUrl: "https://www.congress.gov/bill/119th-congress/senate-bill/1124/text",
+            sourceUrl:
+              "https://www.cruz.senate.gov/newsroom/press-releases/sen-cruz-introduces-bill-to-block-federal-reserve-from-issuing-central-bank-digital-currency",
+            scopeNote:
+              "Included in Crypto because CBDC policy is a major digital-asset issue even though the bill is about government-issued digital currency rather than Bitcoin itself.",
+          },
+          {
+            chamber: "House bill",
+            billNumber: "H.R.1919",
+            title: "Anti-CBDC Surveillance State Act",
+            introducedDate: "March 6, 2025",
+            latestActionDate: "July 17, 2025",
+            status: "Passed House",
+            summary:
+              "Would prohibit the Federal Reserve from issuing a CBDC to individuals, bar indirect retail issuance through intermediaries, and limit CBDC use in monetary policy.",
+            billUrl: "https://www.congress.gov/bill/119th-congress/house-bill/1919",
+            textUrl: "https://www.congress.gov/bill/119th-congress/house-bill/1919/text",
+            sourceUrl:
+              "https://emmer.house.gov/media-center/press-releases/majority-whip-tom-emmer-s-flagship-legislation-the-anti-cbdc-surveillance-state-act-passes-house-of-representatives",
+            scopeNote:
+              "Included in Crypto because it is a major House digital-currency bill affecting the broader U.S. digital asset policy debate rather than Bitcoin only.",
+          },
+          {
+            chamber: "Senate bill",
             billNumber: "S.3611",
             title: "Blockchain Regulatory Certainty Act of 2026",
             introducedDate: "January 12, 2026",
@@ -685,6 +717,8 @@ window.VFB_CONTENT = {
           body:
             "This broader view captures major federal crypto actions that matter politically even when they are not Bitcoin-specific.",
           points: [
+            "S.1124, the Senate Anti-CBDC Surveillance State Act, was introduced on March 25, 2025 and referred to the Senate Banking Committee.",
+            "H.R.1919, the House Anti-CBDC Surveillance State Act, passed the House on July 17, 2025.",
             "S.3611, the Blockchain Regulatory Certainty Act of 2026, was introduced in the Senate on January 12, 2026 by Cynthia Lummis and Ron Wyden.",
             "S.3755, the Digital Commodity Intermediaries Act, was reported by the Senate Agriculture Committee and placed on the Senate calendar on February 2, 2026.",
             "S.1582, the GENIUS Act, passed the Senate 68-30 on June 17, 2025 and became Public Law No. 119-27 on July 18, 2025.",
