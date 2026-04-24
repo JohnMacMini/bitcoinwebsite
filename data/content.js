@@ -511,7 +511,7 @@ window.VFB_CONTENT = {
           title:
             "Bitcoin-specific Senate floor votes have not been found in the current dataset.",
           body:
-            "As of April 5, 2026, the Bitcoin-only measures tracked here show introduction, referral, and executive action, but no recorded Senate floor roll call.",
+            "As of April 24, 2026, the Bitcoin-only measures tracked here show introduction, referral, and executive action, but no recorded Senate floor roll call.",
           secondary:
             "When a direct Bitcoin bill receives a recorded vote, this section can show senator-by-senator results instead of sponsorship alone.",
         },
@@ -524,6 +524,7 @@ window.VFB_CONTENT = {
             "S.954 was introduced on March 11, 2025 and referred to the Senate Banking, Housing, and Urban Affairs Committee.",
             "Congress.gov shows original Senate cosponsors for S.954 as Cynthia Lummis, Jim Justice, Tommy Tuberville, Bernie Moreno, Roger Marshall, and Marsha Blackburn.",
             "Executive Order 14233 was issued on March 6, 2025 and directly established a Strategic Bitcoin Reserve.",
+            "No additional Bitcoin-only federal bills or executive orders were identified between April 5, 2026 and April 24, 2026.",
           ],
         },
       },
@@ -531,6 +532,38 @@ window.VFB_CONTENT = {
         voteSummary:
           "2 recorded Senate floor votes are currently included in the broader crypto scope.",
         bills: [
+          {
+            chamber: "Senate bill",
+            billNumber: "S.3611",
+            title: "Blockchain Regulatory Certainty Act of 2026",
+            introducedDate: "January 12, 2026",
+            latestActionDate: "January 12, 2026",
+            status: "Introduced and referred to committee",
+            summary:
+              "Would clarify that non-custodial blockchain developers and infrastructure providers that do not control user funds are not treated as money transmitters under federal law.",
+            billUrl: "https://www.congress.gov/bill/119th-congress/senate-bill/3611",
+            textUrl: "https://www.congress.gov/bill/119th-congress/senate-bill/3611/text",
+            sourceUrl:
+              "https://www.lummis.senate.gov/press-releases/lummis-wyden-introduce-bipartisan-legislation-to-protect-blockchain-developers-from-money-transmitter-requirements/",
+            scopeNote:
+              "Included in Crypto because it affects blockchain and digital asset infrastructure regulation broadly rather than Bitcoin specifically.",
+          },
+          {
+            chamber: "Senate bill",
+            billNumber: "S.3755",
+            title: "Digital Commodity Intermediaries Act",
+            introducedDate: "February 2, 2026",
+            latestActionDate: "February 2, 2026",
+            status: "Reported by Senate Agriculture Committee and placed on Senate calendar",
+            summary:
+              "Would create a CFTC-centered federal framework for digital commodity intermediaries and move Senate market-structure legislation onto the legislative calendar.",
+            billUrl: "https://www.congress.gov/bill/119th-congress/senate-bill/3755",
+            textUrl: "https://www.congress.gov/bill/119th-congress/senate-bill/3755/text",
+            sourceUrl:
+              "https://www.agriculture.senate.gov/newsroom/rep/press/release/boozman-leads-ag-committee-in-advancing-crypto-market-structure-legislation",
+            scopeNote:
+              "Included in Crypto because it is a broad market-structure and intermediary-regulation bill for digital commodities, not a Bitcoin-only measure.",
+          },
           {
             chamber: "Senate bill",
             billNumber: "S.1582",
@@ -646,6 +679,8 @@ window.VFB_CONTENT = {
           body:
             "This broader view captures major federal crypto actions that matter politically even when they are not Bitcoin-specific.",
           points: [
+            "S.3611, the Blockchain Regulatory Certainty Act of 2026, was introduced in the Senate on January 12, 2026 by Cynthia Lummis and Ron Wyden.",
+            "S.3755, the Digital Commodity Intermediaries Act, was reported by the Senate Agriculture Committee and placed on the Senate calendar on February 2, 2026.",
             "S.1582, the GENIUS Act, passed the Senate 68-30 on June 17, 2025 and became Public Law No. 119-27 on July 18, 2025.",
             "H.R.3633, the CLARITY Act, was received in the Senate on September 18, 2025 and referred to the Senate Banking Committee.",
             "H.J.Res.25 passed the Senate 70-28 on March 26, 2025 and became Public Law No. 119-5 on April 10, 2025.",
